@@ -1,0 +1,36 @@
+.back-image {
+  width:44%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+.flex-row {
+  -ms-flex-direction: row !important;
+  flex-direction: row !important; }
+.app-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh; }
+.text-siv {
+  -webkit-text-stroke: 1px black;
+  cursor: default;
+  color: white;
+  xt-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px  1px 0 #000,
+    1px  1px 0 #000; }
+.text-grow:hover {
+  -webkit-transition-duration:2s;
+  transition-duration: 2s;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1); }
+.btn-success:hover {
+  background-color: #32cd56;
+  border-color: #32cd56; }
+.default-pointer {
+  cursor: default; }
