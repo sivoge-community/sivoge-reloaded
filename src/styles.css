@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "UTF-8"; /*TODO: Aqui tengo que eliminar todo lo que agregué, ya que hace referencia a bootstrap*/
 .error-container {
   height: 100%;
   position: fixed;

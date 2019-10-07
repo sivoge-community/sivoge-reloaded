@@ -10,6 +10,8 @@ import { ForbiddenComponent } from '../../errors/forbidden/forbidden.component';
 import { InternalServerErrorComponent } from '../../errors/internal-server-error/internal-server-error.component';
 import { LoginComponent } from '../login/login.component';
 
+import {LoginService} from '../../services/login.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,7 @@ import { LoginComponent } from '../login/login.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
