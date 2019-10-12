@@ -2,7 +2,7 @@
   <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" [routerLink]="['/admin']">
     <img class="navbar-brand-full" src="assets/images/norsup-shield.svg" width="110" height="45" alt="Logo full">
     <img class="navbar-brand-minimized" src="assets/images/norsup-shield.svg" width="30" height="30" alt="Logo minimized">
   </a>
@@ -19,10 +19,10 @@
         <div class="dropdown-header text-center">
           <strong>Settings</strong>
         </div>
-        <a class="dropdown-item" href="#">
+        <a class="dropdown-item" [routerLink]="['/admin']">
           <i class="fas fa-user"></i> <span class="ml-2">Perfil</span>
         </a>
-        <a class="dropdown-item" href="#">
+        <a class="dropdown-item" [routerLink]="['/admin']">
           <i class="fas fa-wrench"></i> <span class="ml-2">Configuraciones</span>
         </a>
         <div class="dropdown-divider"></div>

@@ -1,6 +1,6 @@
 {
   "name": "sivoge-frontend",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~8.2.3",
     "@angular/router": "~8.2.3",
     "@coreui/coreui": "^2.1.12",
+    "@ng-bootstrap/ng-bootstrap": "^5.1.1",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "perfect-scrollbar": "^1.4.0",

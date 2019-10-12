@@ -13,6 +13,14 @@
   text-shadow: 4px 4px 0 #fff, 6px 6px 0 #343a40;
   line-height: 210px;
 }
+.modal-holder{
+  animation-name: example;
+  animation-duration: 0.3s;
+}
+@keyframes example {
+  0%   {transform: scale(0.5)}
+  100% {transform: scale(1)}
+}
 
 *,
 *::before,

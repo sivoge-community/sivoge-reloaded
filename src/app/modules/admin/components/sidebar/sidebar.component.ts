@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {AdminModalsService} from '../../../../services/admin-modals.service';
+import {ModalVotingSessionComponent} from '../main/modal-voting-session/modal-voting-session.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modalVotingSessionService: AdminModalsService) { }
 
   ngOnInit() {
+  }
+
+  openSessionModal() {
+    this.modalVotingSessionService.openSessionModal(ModalVotingSessionComponent);
   }
 
 }

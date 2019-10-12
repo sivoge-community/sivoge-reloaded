@@ -1,0 +1,41 @@
+<div class="modal-header">
+  <h4 class="modal-title"><i class="fas fa-vote-yea"></i> Sesión de Votación </h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form>
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <label for="session-name">Nombre de sesión</label>
+          <input type="text" class="form-control" name="session-name" id="session-name" aria-describedby="session-name"
+                 [placeholder]="'Votaciones ' + date.year">
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-group">
+          <label for="date">Fecha de votaciones</label>
+          <input class="form-control" placeholder="yyyy-mm-dd" id="date"
+                 name="dp" [(ngModel)]="date" ngbDatepicker #d="ngbDatepicker" (focus)="d.toggle()" [readOnly]="true">
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label for="start-time">Hora de inicio</label>
+          <ngb-timepicker id="start-time" name="start-time" [meridian]="true" [(ngModel)]="startTime"></ngb-timepicker>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group">
+          <label for="end-time">Hora de finalización</label>
+          <ngb-timepicker id="end-time" name="end-time" [meridian]="true" [(ngModel)]="endTime"></ngb-timepicker>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-success" (click)="activeModal.close('Close click')">Crear</button>
+</div>
