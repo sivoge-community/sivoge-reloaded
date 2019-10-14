@@ -12,4 +12,12 @@ export class AdminModalsService {
     this.modalService.open(modalComponent, {windowClass: 'modal-holder'});
   }
 
+  openFileUploadModal(modalComponent) {
+    this.modalService.open(modalComponent, {windowClass: 'modal-holder'});
+  }
+
+  openTeacherModal(modalComponent) {
+    this.modalService.open(modalComponent, {windowClass: 'modal-holder'});
+  }
+
 }

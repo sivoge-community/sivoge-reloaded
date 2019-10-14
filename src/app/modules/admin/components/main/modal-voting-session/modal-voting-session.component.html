@@ -17,8 +17,9 @@
       <div class="col-12">
         <div class="form-group">
           <label for="date">Fecha de votaciones</label>
-          <input class="form-control" placeholder="yyyy-mm-dd" id="date"
-                 name="dp" [(ngModel)]="date" ngbDatepicker #d="ngbDatepicker" (focus)="d.toggle()" [readOnly]="true">
+          <input class="form-control" placeholder="año-mes-dia" id="date"
+                 name="date" [(ngModel)]="date" ngbDatepicker #d="ngbDatepicker"
+                 (focus)="d.toggle()" [readOnly]="true" [minDate]="{year: date.year, month: date.month, day: date.day}">
         </div>
       </div>
       <div class="col-6">

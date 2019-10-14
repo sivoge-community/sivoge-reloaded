@@ -11,11 +11,13 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { AdminDefaultComponent } from './components/main/admin-default/admin-default.component';
 import { ModalVotingSessionComponent } from './components/main/modal-voting-session/modal-voting-session.component';
+import { ModalUserFileUploadComponent } from './components/main/modal-user-file-upload/modal-user-file-upload.component';
 
 import { MonthPipe } from '../../pipes/month.pipe';
 import { SanitizeHtmlPipe } from '../../pipes/sanitize-html.pipe';
 
 import {AdminModalsService} from '../../services/admin-modals.service';
+import { ModalCreateTeacherComponent } from './components/main/modal-create-teacher/modal-create-teacher.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import {AdminModalsService} from '../../services/admin-modals.service';
     AdminDefaultComponent,
     MonthPipe,
     ModalVotingSessionComponent,
-    SanitizeHtmlPipe
+    SanitizeHtmlPipe,
+    ModalUserFileUploadComponent,
+    ModalCreateTeacherComponent
   ],
   exports: [
     HeaderComponent,
@@ -43,6 +47,10 @@ import {AdminModalsService} from '../../services/admin-modals.service';
     NgbDatepickerModule
   ],
   providers: [AdminModalsService],
-  entryComponents: [ModalVotingSessionComponent]
+  entryComponents: [
+    ModalVotingSessionComponent,
+    ModalUserFileUploadComponent,
+    ModalCreateTeacherComponent
+  ]
 })
 export class AdminModule { }

@@ -11,11 +11,11 @@
       </li>
       <li class="nav-title">Usuarios</li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="nav-icon fas fa-pencil-alt"></i> Estudiantes</a>
+        <a class="nav-link cursor-pointer" (click)="openFileUploadModal()">
+        <i class="nav-icon fas fa-pencil-alt"></i> Estudiantes</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link cursor-pointer" (click)="openTeacherModal()">
           <i class="nav-icon fa fa-briefcase"></i> Profesores</a>
       </li>
       <li class="nav-title">Aspirantes y Jurado</li>
@@ -54,5 +54,4 @@
       <li class="divider"></li>
     </ul>
   </nav>
-  <button class="sidebar-minimizer brand-minimizer" type="button"></button>
 </aside>

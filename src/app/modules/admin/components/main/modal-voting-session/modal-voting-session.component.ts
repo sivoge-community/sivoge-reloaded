@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
+import {SessionDate} from '../../../../../classes/models/date.model';
 
 @Component({
   selector: 'app-modal-voting-session',
@@ -10,7 +11,7 @@ export class ModalVotingSessionComponent implements OnInit {
   private currentDate = new Date();
 
   private startTime = {
-    hour: 10,
+    hour: 7,
     minute: 0
   };
   private endTime = {
@@ -18,13 +19,13 @@ export class ModalVotingSessionComponent implements OnInit {
     minute: 0
   };
 
-  private date = {
-    year: this.currentDate.getFullYear(),
-    month: this.currentDate.getMonth() + 1,
-    day: this.currentDate.getDate()
-  };
+  public date: SessionDate = new SessionDate(
+    this.currentDate.getFullYear(),
+    this.currentDate.getMonth() + 1,
+    this.currentDate.getDate()
+  );
 
-  constructor(public activeModal: NgbActiveModal) { }
+  constructor(private activeModal: NgbActiveModal) { }
 
   ngOnInit(): void {  }
 
