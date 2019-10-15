@@ -10,14 +10,14 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { AdminDefaultComponent } from './components/main/admin-default/admin-default.component';
-import { ModalVotingSessionComponent } from './components/main/modal-voting-session/modal-voting-session.component';
-import { ModalUserFileUploadComponent } from './components/main/modal-user-file-upload/modal-user-file-upload.component';
+import { ModalVotingSessionComponent } from './components/main/modals/modal-voting-session/modal-voting-session.component';
+import { ModalUserFileUploadComponent } from './components/main/modals/modal-user-file-upload/modal-user-file-upload.component';
 
 import { MonthPipe } from '../../pipes/month.pipe';
 import { SanitizeHtmlPipe } from '../../pipes/sanitize-html.pipe';
 
 import {AdminModalsService} from '../../services/admin-modals.service';
-import { ModalCreateTeacherComponent } from './components/main/modal-create-teacher/modal-create-teacher.component';
+import { ModalCreateTeacherComponent } from './components/main/modals/modal-create-teacher/modal-create-teacher.component';
 
 
 @NgModule({

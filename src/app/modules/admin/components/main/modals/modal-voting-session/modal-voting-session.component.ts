@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
-import {SessionDate} from '../../../../../classes/models/date.model';
+import {SessionDate} from '../../../../../../classes/models/date.model';
 
 @Component({
   selector: 'app-modal-voting-session',
