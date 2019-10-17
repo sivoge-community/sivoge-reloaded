@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin-routing.module';
-import {NgbDatepickerModule, NgbModalModule, NgbTimepickerModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbDatepickerModule, NgbModalModule, NgbPaginationModule, NgbTimepickerModule, NgbTooltipModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
 
 import { AdminComponent } from './components/main/admin.component';
@@ -9,15 +9,16 @@ import {HeaderComponent} from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
-import { AdminDefaultComponent } from './components/main/admin-default/admin-default.component';
+import { AdminDefaultComponent } from './components/main/sections/admin-default/admin-default.component';
 import { ModalVotingSessionComponent } from './components/main/modals/modal-voting-session/modal-voting-session.component';
 import { ModalUserFileUploadComponent } from './components/main/modals/modal-user-file-upload/modal-user-file-upload.component';
+import { ModalCreateTeacherComponent } from './components/main/modals/modal-create-teacher/modal-create-teacher.component';
+import { AdminStudentComponent } from './components/main/sections/admin-student/admin-student.component';
 
 import { MonthPipe } from '../../pipes/month.pipe';
 import { SanitizeHtmlPipe } from '../../pipes/sanitize-html.pipe';
 
 import {AdminModalsService} from '../../services/admin-modals.service';
-import { ModalCreateTeacherComponent } from './components/main/modals/modal-create-teacher/modal-create-teacher.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { ModalCreateTeacherComponent } from './components/main/modals/modal-crea
     ModalVotingSessionComponent,
     SanitizeHtmlPipe,
     ModalUserFileUploadComponent,
-    ModalCreateTeacherComponent
+    ModalCreateTeacherComponent,
+    AdminStudentComponent
   ],
   exports: [
     HeaderComponent,
@@ -44,7 +46,9 @@ import { ModalCreateTeacherComponent } from './components/main/modals/modal-crea
     NgbModalModule,
     FormsModule,
     NgbTimepickerModule,
-    NgbDatepickerModule
+    NgbDatepickerModule,
+    NgbPaginationModule,
+    NgbTooltipModule
   ],
   providers: [AdminModalsService],
   entryComponents: [

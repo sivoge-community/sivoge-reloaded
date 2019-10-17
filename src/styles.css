@@ -25,6 +25,9 @@
 .color-red {
   color: red;
 }
+.active-link {
+  background-color: #20a8d8 !important;
+}
 
 *,
 *::before,
@@ -144,7 +147,7 @@ sup {
 }
 
 a {
-  color: #20a8d8;
+  color: #0072b1;
   text-decoration: none;
   background-color: transparent;
 }
@@ -12802,7 +12805,7 @@ canvas {
 }
 
 .sidebar .nav-link.active .nav-icon {
-  color: #20a8d8;
+  color: white;
 }
 
 .sidebar .nav-link:hover {
@@ -13176,7 +13179,7 @@ canvas {
     overflow: visible;
   }
   .sidebar-minimized .sidebar .nav-item:hover > .nav-link {
-    background: #20a8d8;
+    background: #0072b1;
   }
   .sidebar-minimized .sidebar .nav-item:hover > .nav-link .nav-icon {
     color: #fff;
@@ -13214,7 +13217,7 @@ canvas {
   }
   .sidebar-minimized .sidebar .nav-link:hover {
     width: 250px;
-    background: #20a8d8;
+    background: #0072b1;
   }
   .sidebar-minimized .sidebar .nav-link:hover .badge {
     display: inline;
@@ -13234,7 +13237,7 @@ canvas {
     background: #2f353a;
   }
   .sidebar-minimized .sidebar .nav > .nav-dropdown:hover {
-    background: #20a8d8;
+    background: #0072b1;
   }
   .sidebar-minimized .sidebar .nav > .nav-dropdown:hover > .nav-dropdown-items {
     position: absolute;
@@ -13271,7 +13274,7 @@ canvas {
     background: #2f353a;
   }
   *[dir="rtl"] .sidebar-minimized .sidebar .nav > .nav-dropdown:hover {
-    background: #20a8d8;
+    background: #0072b1;
   }
   *[dir="rtl"] .sidebar-minimized .sidebar .nav > .nav-dropdown:hover > .nav-dropdown-items {
     position: absolute;
@@ -13537,7 +13540,7 @@ canvas {
 }
 
 .switch-primary .switch-input:checked + .switch-slider {
-  background-color: #20a8d8;
+  background-color: #0072b1;
   border-color: #1985ac;
 }
 
@@ -13547,29 +13550,29 @@ canvas {
 
 .switch-outline-primary .switch-input:checked + .switch-slider {
   background-color: #fff;
-  border-color: #20a8d8;
+  border-color: #0072b1;
 }
 
 .switch-outline-primary .switch-input:checked + .switch-slider::before {
-  border-color: #20a8d8;
+  border-color: #0072b1;
 }
 
 .switch-outline-primary .switch-input:checked + .switch-slider::after {
-  color: #20a8d8;
+  color: #0072b1;
 }
 
 .switch-outline-primary-alt .switch-input:checked + .switch-slider {
   background-color: #fff;
-  border-color: #20a8d8;
+  border-color: #0072b1;
 }
 
 .switch-outline-primary-alt .switch-input:checked + .switch-slider::before {
-  background-color: #20a8d8;
-  border-color: #20a8d8;
+  background-color: #0072b1;
+  border-color: #0072b1;
 }
 
 .switch-outline-primary-alt .switch-input:checked + .switch-slider::after {
-  color: #20a8d8;
+  color: #0072b1;
 }
 
 .switch-secondary .switch-input:checked + .switch-slider {
@@ -14985,7 +14988,7 @@ button.bg-vimeo:focus {
 }
 
 .bg-blue {
-  background-color: #20a8d8 !important;
+  background-color: #0072b1 !important;
 }
 
 a.bg-blue:hover, a.bg-blue:focus,
@@ -16339,7 +16342,7 @@ body {
 }
 
 .ie-custom-properties {
-  blue: #20a8d8;
+  blue: #0072b1;
   indigo: #6610f2;
   purple: #6f42c1;
   pink: #e83e8c;

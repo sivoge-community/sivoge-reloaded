@@ -9,5 +9,6 @@ export class User {
               public cellphone?: string,
               public dayTime?: string,
               public grade?: string,
-              public group?: string) {}
+              public group?: string,
+              public initialLastName?: string) {}
 }

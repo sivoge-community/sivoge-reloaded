@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-default.component.css']
 })
 export class AdminDefaultComponent implements OnInit {
+  public title = 'analytics';
 
   constructor() { }
 
