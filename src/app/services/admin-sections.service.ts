@@ -1,15 +1,17 @@
 import {Injectable} from '@angular/core';
-import {AspirantJuryService} from './aspirant-jury.service';
+import {RequestAspirantJuryService} from './request-aspirant-jury.service';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AdminSectionsService {
-  public students = [];
-  public teachers = [];
+  public students: Observable<any>;
+  public teachers: Observable<any>;
 
-  constructor(private aspirantJuryService: AspirantJuryService) {
+  constructor(private aspirantJuryService: RequestAspirantJuryService) {
     this.students = this.aspirantJuryService.getStudents();
+    this.aspirantJuryService.getStudents();
     this.teachers = this.aspirantJuryService.getTeachers();
   }
 

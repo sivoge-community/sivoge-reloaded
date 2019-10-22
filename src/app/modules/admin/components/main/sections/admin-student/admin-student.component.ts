@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AdminSectionsService} from '../../../../../../services/admin-sections.service';
+import {Aspirant} from '../../../../../../classes/models/aspirant.model';
 
 @Component({
   selector: 'app-admin-student',
@@ -9,22 +10,25 @@ import {AdminSectionsService} from '../../../../../../services/admin-sections.se
 export class AdminStudentComponent implements OnInit {
   public title = 'Estudiantes';
 
-  public students: Array<any>;
-  public pageSymbols = [];
+  public students: Aspirant[];
+  public studentsLength: number;
   public page: number;
   public pageSize: number;
 
   constructor(private adminSectionsService: AdminSectionsService) { }
 
   ngOnInit() {
-    this.students = this.updateObject(this.adminSectionsService.students);
-    this.pageSymbols = this.uniqueLetters(this.students);
+    // this.students = this.updateObject(this.adminSectionsService.students);
+    this.adminSectionsService.students.subscribe(aspirant => {
+      this.students = aspirant.student;
+      this.studentsLength = aspirant.student.length;
+    });
     this.page = 1;
     this.pageSize = 7;
   }
 
   getStudentsLength() {
-    return this.students.length;
+    return this.studentsLength;
   }
 
   uniqueLetters(initialLastNameLetter: Array<string>) {
@@ -40,10 +44,6 @@ export class AdminStudentComponent implements OnInit {
   }
   onShowAspirantClick() {
     console.log('se hizo click xD');
-  }
-
-  getPageSymbols(current: number) {
-    return this.pageSymbols[current - 1];
   }
 
 }

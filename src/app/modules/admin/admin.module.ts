@@ -19,6 +19,7 @@ import { MonthPipe } from '../../pipes/month.pipe';
 import { SanitizeHtmlPipe } from '../../pipes/sanitize-html.pipe';
 
 import {AdminModalsService} from '../../services/admin-modals.service';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import {AdminModalsService} from '../../services/admin-modals.service';
     AdminRoutingModule,
     NgbModalModule,
     FormsModule,
+    HttpClientModule,
     NgbTimepickerModule,
     NgbDatepickerModule,
     NgbPaginationModule,

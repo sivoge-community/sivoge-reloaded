@@ -1,0 +1,47 @@
+{
+  "session": {
+    "data": [
+      {"id": 1, "name":  "votaciones 2018", "date":  "2018-04-22", "start_time":  "08:00:00", "end_time":  "13:00:00", "active":  0},
+      {"id": 2, "name":  "votaciones 2019", "date":  "2019-12-21", "start_time":  "08:30:00", "end_time":  "12:00:00", "active":  1}
+    ],
+    "active": 1
+},
+  "students": [
+    {"id": 1, "docId": "1067937377", "docType": "cc", "name": "Miguel Antonio", "lastName": "Caballero Gil", "admin": 1, "active": 1, "grade": 11, "group": "B", "initialLastName": "C", "avatar":  "norsup-5.jpg"},
+    {"id": 2, "docId": "1062855468", "docType": "cc", "name": "Manuel Alberto", "lastName": "Chucho Papuzo", "admin": 0, "active": 1, "grade": 8, "group": "A", "initialLastName": "C", "avatar":  "norsup-5.jpg"},
+    {"id": 3, "docId": "1068974452", "docType": "ti", "name": "Arley Camilo", "lastName": "Greene Mcaboy", "admin": 0, "active": 1, "grade": 7, "group": "C", "initialLastName": "G", "avatar":  "norsup-5.jpg"},
+    {"id": 4, "docId": "1068799851", "docType": "cc", "name": "Peter Phil", "lastName": "Underwood Mackay", "admin": 0, "active": 1, "grade": 12, "group": "D", "initialLastName": "U", "avatar":  "norsup-5.jpg"},
+    {"id": 5, "docId": "1068958645", "docType": "cc", "name": "Charles Owen", "lastName": "King Cornish", "admin": 0, "active": 1, "grade": 8, "group": "A", "initialLastName": "K", "avatar":  "norsup-5.jpg"},
+    {"id": 6, "docId": "1068826693", "docType": "cc", "name": "Pippa Rachel", "lastName": "Russell Newman", "admin": 0, "active": 1, "grade": 13, "group": "A", "initialLastName": "R", "avatar":  "norsup-5.jpg"},
+    {"id": 7, "docId": "1127682651", "docType": "ti", "name": "Sophie Hannah", "lastName": "Wilkins Ince", "admin": 0, "active": 1, "grade": 10, "group": "C", "initialLastName": "W", "avatar":  "norsup-5.jpg"},
+    {"id": 8, "docId": "7955641388", "docType": "ti", "name": "Kylie Alice", "lastName": "Forsyth Harris", "admin": 0, "active": 1, "grade": 8, "group": "B", "initialLastName": "F", "avatar":  "norsup-5.jpg"},
+    {"id": 9, "docId": "18189563482", "docType": "cc", "name": "Neil Alexander", "lastName": "Simpson Newman", "admin": 0, "active": 1, "grade": 11, "group": "C", "initialLastName": "S", "avatar":  "norsup-5.jpg"}
+  ],
+  "teachers": [
+    {"id": 10, "docId": "50928595", "docType": "cc", "name": "Micah Erick", "lastName": "Mason Cordova", "admin": 1, "active": 1, "initialLastName": "M", "session_id":  2},
+    {"id": 11, "docId": "51910590", "docType": "cc", "name": "Elaine Moylin", "lastName": "Friedman Navarro", "admin": 0, "active": 1, "initialLastName": "F", "avatar":  "norsup-4.jpg"},
+    {"id": 12, "docId": "45002819", "docType": "cc", "name": "Zackery Beardo", "lastName": "Welch Mcaboy", "admin": 0, "active": 1, "initialLastName": "W"},
+    {"id": 13, "docId": "56908575", "docType": "cc", "name": "George Roberto", "lastName": "Underwood Mackay", "admin": 0, "active": 1, "initialLastName": "U", "avatar":  "norsup-4.jpg"}
+  ],
+  "aspirant": {
+    "student": [
+      {"id": 2, "docId": "1062855468", "docType": "cc", "name": "Manuel Alberto", "lastName": "Chucho Papuzo", "admin": 0, "active": 1, "grade": 8, "group": "A", "initialLastName": "C", "aspirant_type":  "consejo", "avatar":  "norsup-5.jpg"},
+      {"id": 5, "docId": "1068958645", "docType": "cc", "name": "Charles Owen", "lastName": "King Cornish", "admin": 0, "active": 1, "grade": 8, "group": "A", "initialLastName": "K","aspirant_type":  "consejo", "avatar":  "norsup-5.jpg"},
+      {"id": 6, "docId": "1068826693", "docType": "cc", "name": "Pippa Rachel", "lastName": "Russell Newman", "admin": 0, "active": 1, "grade": 13, "group": "A", "initialLastName": "R","aspirant_type":  "consejo", "avatar":  "norsup-5.jpg"},
+      {"id": 7, "docId": "1127682651", "docType": "ti", "name": "Sophie Hannah", "lastName": "Wilkins Ince", "admin": 0, "active": 1, "grade": 10, "group": "C", "initialLastName": "W","aspirant_type":  "contralor", "avatar":  "norsup-5.jpg"},
+      {"id": 9, "docId": "18189563482", "docType": "cc", "name": "Neil Alexander", "lastName": "Simpson Newman", "admin": 0, "active": 1, "grade": 11, "group": "C", "initialLastName": "S","aspirant_type":  "personero", "avatar":  "norsup-5.jpg"}
+    ],
+    "teacher": [
+      {"id": 10, "docId": "50928595", "docType": "cc", "name": "Micah Erick", "lastName": "Mason Cordova", "admin": 1, "active": 1, "initialLastName": "M", "aspirant_type":  "docente", "avatar":  "norsup-4.jpg"},
+      {"id": 11, "docId": "51910590", "docType": "cc", "name": "Elaine Moylin", "lastName": "Friedman Navarro", "admin": 0, "active": 1, "initialLastName": "F", "aspirant_type":  "docente", "avatar":  "norsup-4.jpg"},
+      {"id": 13, "docId": "56908575", "docType": "cc", "name": "George Roberto", "lastName": "Underwood Mackay", "admin": 0, "active": 1, "initialLastName": "U", "aspirant_type":  "docente", "avatar":  "norsup-4.jpg"},
+      {"id": 15, "docId": "56893085", "docType": "cc", "name": "Rachel Ali", "lastName": "Russell Clark", "admin": 0, "active": 1, "initialLastName": "R", "aspirant_type":  "docente", "avatar":  "norsup-4.jpg"},
+      {"id": 16, "docId": "53235486", "docType": "cc", "name": "Sophie Tay", "lastName": "Briggs Ince", "admin": 0, "active": 1, "initialLastName": "B", "aspirant_type":  "docente", "avatar":  "norsup-4.jpg"},
+      {"id": 17, "docId": "58893659", "docType": "cc", "name": "Alice Kat", "lastName": "Rosario Cordova", "admin": 0, "active": 1, "initialLastName": "R", "aspirant_type":  "docente", "avatar":  "norsup-4.jpg"}
+    ]
+  },
+  "jury": [
+    {"id": 1, "docId": "1067937377", "docType": "cc", "name": "Miguel Antonio", "lastName": "Caballero Gil", "admin": 1, "active": 1, "grade": 11, "group": "B", "initialLastName": "C", "avatar":  "norsup-5.jpg"},
+    {"id": 8, "docId": "7955641388", "docType": "ti", "name": "Kylie Alice", "lastName": "Forsyth Harris", "admin": 0, "active": 1, "grade": 8, "group": "B", "initialLastName": "F", "avatar":  "norsup-5.jpg"}
+  ]
+}
