@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {RequestAspirantJuryService} from './request-aspirant-jury.service';
 import {Observable} from 'rxjs';
+import {Aspirant} from '../classes/models/aspirant.model';
 
 @Injectable({
   providedIn: 'root'
@@ -15,24 +16,27 @@ export class AdminSectionsService {
     this.teachers = this.aspirantJuryService.getTeachers();
   }
 
-  updateObject(users: any): any { // Method used to insert a key to initial letter to the main object
+  updateObject(users: any): any { // Method used to insert keys to the main object
     return users.map(user => {
       return Object.assign(
         {
-          initialLastName: this.initialLastNameLetter(user.name)
+          initialLastName: this.initialLastNameLetter(user.lastName),
+          displayNames: this.nameLastNameSplitter(user.name, user.lastName)
         }, user);
     });
   }
 
-  initialLastNameLetter(lastName: string): string {
-    return lastName.split(' ')[0][0];
+  initialLastNameLetter = (lastName: string): string => lastName.split(' ')[0][0];
+
+  nameLastNameSplitter(dataName: any, dataLastName: any) {
+    const name = dataName.split(' ')[0];
+    const lastName = dataLastName.split(' ')[0];
+    return `${name} ${lastName}`;
   }
 
-  uniqueLetters(initialLastNameLetter: Array<any>) {
-    const b: Array<any> = [];
-    initialLastNameLetter.map(data => {
-      b.push(data.initialLastName);
-    });
-    return [...new Set(b)];
-  }
+  getStudent = (id: string): Observable<any> => this.aspirantJuryService.getStudent(id);
+
+  updateStudent = (aspirant: Aspirant): Observable<any> => this.aspirantJuryService.updateStudent(aspirant);
+
+  deleteStudent = (id: number): Observable<any> => this.aspirantJuryService.deleteStudent(id);
 }

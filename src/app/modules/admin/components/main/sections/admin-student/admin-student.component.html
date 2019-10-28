@@ -4,7 +4,7 @@
     <ngb-pagination
       [(page)]="page"
       [pageSize]="pageSize"
-      [collectionSize]="getStudentsLength()"
+      [collectionSize]="studentsLength"
       [maxSize]="4" [rotate]="true" [ellipses]="false"
       [boundaryLinks]="true"></ngb-pagination>
   </div>
@@ -22,19 +22,21 @@
           <h4>+</h4>
         </div>
       </div>
-      <div *ngFor="let student of students | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+      <div *ngFor="let student of student$ | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
         <div class="box no-select" [ngStyle]="{'background': 'url(assets/images/' + student.avatar + ') no-repeat',
                                     'background-size': 'cover', 'background-position': 'center'}">
-          <button type="button" class="close close-btn" aria-label="Close" [ngbTooltip]="deleteBtn">
+          <button type="button" class="close close-btn" aria-label="Close" [ngbTooltip]="deleteBtn" (click)="onDeleteClick(student)">
             <span aria-hidden="true">&times;</span>
           </button>
           <div class="grade">
             <h4> Grado: {{ student.grade + student.group }} </h4>
             <!--<h4 class="text-capitalize"> {{ student.aspirant_type }} </h4>-->
           </div>
-          <h1> {{ student.name }} </h1>
-          <div class="poster p2" (click)="onShowAspirantClick()" [ngbTooltip]="showBtn">
-            <h4> {{ student.initialLastName }} </h4>
+          <h1> {{ student.displayNames }} </h1>
+          <div class="poster p2" (click)="onShowAspirantClick(student.docId)" [ngbTooltip]="showBtn">
+            <a class="text-decoration-none" [routerLink]="['/admin/students', student.docId]">
+              <h4> {{ student.initialLastName }} </h4>
+            </a>
           </div>
       </div>
       </div>

@@ -1,0 +1,40 @@
+<div *ngFor="let student of student$ | async">
+  <div class="card-header"> Perfil del aspirante</div>
+  <div class="card-body">
+  <div class="container">
+    <div class="card-container mx-auto no-select">
+      <button type="button" class="close close-btn" aria-label="Close" [ngbTooltip]="deleteBtn" (click)="onDeleteClick(student)">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <span class="pro text-uppercase">est</span>
+      <img class="round"
+        src="{{'assets/images/'+ student.avatar}}" height="150" width="150"
+        alt="user"
+      />
+      <h3> {{ student.name }} <br/> {{ student.lastName }} </h3>
+      <h5 class="font-weight-bold">Representante</h5>
+      <h6>Consejo</h6> <!--TODO: Falta el aspirant type-->
+      <p class="mt-2">
+        Estudiante de grado <br />
+        {{ student.grade + " " + student.group }}
+      </p>
+      <div class="buttons">
+        <a class="btn btn-outline-light" [routerLink]="['/admin/students']">
+          Volver
+        </a>
+        <a class="btn btn-outline-success ml-2" [routerLink]="['/admin/students']">
+          Modificar
+        </a>
+      </div>
+    </div>
+  </div>
+    <!--<div class="scene" (click)="toggleFlip()">
+      <div class="card" [ngClass]="{'is-flipped': flip}">
+        <div class="card__face card__face&#45;&#45;front">front</div>
+        <div class="card__face card__face&#45;&#45;back">back</div>
+      </div>
+    </div>-->
+  </div>
+</div>
+
+<ng-template #deleteBtn>Eliminar</ng-template>

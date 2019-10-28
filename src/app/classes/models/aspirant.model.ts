@@ -6,10 +6,12 @@ export class Aspirant implements User {
   public docType: string;
   public name: string;
   public lastName: string;
+  public displayNames?: string;
   public admin: boolean;
   public active: boolean;
   public grade?: string;
   public group?: string;
   public initialLastName?: string;
-  public avatar?: string; // Faltan algunos valores por agrear como aspirant_type, entre otros
+  public avatar?: string;
+  public aspirantType?: string; // Faltan algunos valores por agrear como aspirant_type, entre otros
 }

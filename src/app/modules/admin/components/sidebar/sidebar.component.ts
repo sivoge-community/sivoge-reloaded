@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {AdminModalsService} from '../../../../services/admin-modals.service';
-import {ModalVotingSessionComponent} from '../main/modals/modal-voting-session/modal-voting-session.component';
-import {ModalUserFileUploadComponent} from '../main/modals/modal-user-file-upload/modal-user-file-upload.component';
-import {ModalCreateTeacherComponent} from '../main/modals/modal-create-teacher/modal-create-teacher.component';
+import {ModalVotingSessionComponent} from '../modals/modal-voting-session/modal-voting-session.component';
+import {ModalUserFileUploadComponent} from '../modals/modal-user-file-upload/modal-user-file-upload.component';
+import {ModalCreateTeacherComponent} from '../modals/modal-create-teacher/modal-create-teacher.component';
 
 @Component({
   selector: 'app-sidebar',

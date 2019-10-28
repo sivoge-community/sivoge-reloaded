@@ -1,49 +1,68 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {AdminSectionsService} from '../../../../../../services/admin-sections.service';
 import {Aspirant} from '../../../../../../classes/models/aspirant.model';
+import {Observable, Subject, Subscription} from 'rxjs';
+import {takeUntil} from 'rxjs/operators';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-admin-student',
   templateUrl: './admin-student.component.html',
   styleUrls: ['./admin-student.component.css']
 })
-export class AdminStudentComponent implements OnInit {
+export class AdminStudentComponent implements OnInit, OnDestroy {
   public title = 'Estudiantes';
 
-  public students: Aspirant[];
+  private unsubscribe$ = new Subject<void>();
+  private student$: Aspirant[];
   public studentsLength: number;
   public page: number;
   public pageSize: number;
 
-  constructor(private adminSectionsService: AdminSectionsService) { }
+  constructor(private adminSectionsService: AdminSectionsService, private router: Router) { }
 
   ngOnInit() {
-    // this.students = this.updateObject(this.adminSectionsService.students);
-    this.adminSectionsService.students.subscribe(aspirant => {
-      this.students = aspirant.student;
-      this.studentsLength = aspirant.student.length;
-    });
+    this.adminSectionsService.students
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe(student => {
+        this.student$ = this.updateObject(student);
+        this.studentsLength = student.length;
+      });
     this.page = 1;
     this.pageSize = 7;
+    console.log(this.student$);
   }
 
-  getStudentsLength() {
-    return this.studentsLength;
+  updateObject(student) {
+    return this.adminSectionsService.updateObject(student);
   }
 
-  uniqueLetters(initialLastNameLetter: Array<string>) {
-    return this.adminSectionsService.uniqueLetters(initialLastNameLetter);
-  }
-
-  updateObject(users) {
-    return this.adminSectionsService.updateObject(users);
+  deleteAspirant(student: Aspirant) {
+    this.student$.forEach((item, index) => {
+      if (item.id === student.id) {
+        this.student$.splice(index, 1); // Here i delete the student from the array
+        this.adminSectionsService.deleteStudent(item.id)
+          .pipe(takeUntil(this.unsubscribe$))
+          .subscribe(); // Here i delete the student from the backend
+      }
+    });
   }
 
   onNewAspirantClick() {
     console.log('se hizo click');
   }
-  onShowAspirantClick() {
-    console.log('se hizo click xD');
+  onShowAspirantClick(id: string) {
+    console.log('Click on update');
+    // this.router.navigate(['/admin/students/update/:id', id]);
+  }
+
+  onDeleteClick(aspirant: Aspirant) {
+    this.deleteAspirant(aspirant);
+  }
+
+  ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.unsubscribe();
   }
 
 }
