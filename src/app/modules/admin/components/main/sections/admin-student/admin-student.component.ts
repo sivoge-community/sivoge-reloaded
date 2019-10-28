@@ -51,10 +51,6 @@ export class AdminStudentComponent implements OnInit, OnDestroy {
   onNewAspirantClick() {
     console.log('se hizo click');
   }
-  onShowAspirantClick(id: string) {
-    console.log('Click on update');
-    // this.router.navigate(['/admin/students/update/:id', id]);
-  }
 
   onDeleteClick(aspirant: Aspirant) {
     this.deleteAspirant(aspirant);

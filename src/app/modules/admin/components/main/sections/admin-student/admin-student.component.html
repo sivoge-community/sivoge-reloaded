@@ -33,8 +33,8 @@
             <!--<h4 class="text-capitalize"> {{ student.aspirant_type }} </h4>-->
           </div>
           <h1> {{ student.displayNames }} </h1>
-          <div class="poster p2" (click)="onShowAspirantClick(student.docId)" [ngbTooltip]="showBtn">
-            <a class="text-decoration-none" [routerLink]="['/admin/students', student.docId]">
+          <div class="poster p2" [ngbTooltip]="showBtn">
+            <a class="text-decoration-none" [routerLink]="['/admin/aspirant/student', student.docId]">
               <h4> {{ student.initialLastName }} </h4>
             </a>
           </div>
