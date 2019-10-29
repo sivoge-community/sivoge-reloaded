@@ -1,36 +1,52 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {LoginGuard} from '../../guards/login.guard';
+
 import {AdminComponent} from './components/main/admin.component';
-import {AdminDefaultComponent} from './components/main/sections/admin-default/admin-default.component';
-import {AdminStudentComponent} from './components/main/sections/admin-student/admin-student.component';
-import {AdminStudentUpdateComponent} from './components/main/sections/admin-student-update/admin-student-update.component';
+import {HomeComponent as AdminHome} from './components/main/home/home.component';
+import {AspirantStudentComponent} from './components/aspirant/aspirant-student/aspirant-student.component';
+import {UpdateComponent as StudentUpdate} from './components/aspirant/aspirant-student/update/update.component';
+import {SessionsComponent} from './components/session/sessions/sessions.component';
+import {ProfileComponent} from './components/profile/profile.component';
+import {ProfileUpdateComponent} from './components/profile/profile-update/profile-update.component';
+import {UpdateComponent as AspTeacherUpdate} from './components/aspirant/aspirant-teacher/update/update.component';
+import {AspirantTeacherComponent} from './components/aspirant/aspirant-teacher/aspirant-teacher.component';
+import {TeacherComponent} from './components/teacher/teacher.component';
+import {UpdateComponent as TeacherUpdate} from './components/teacher/update/update.component';
+import {UpdateComponent as SessionUpdate} from './components/session/update/update.component';
+import {JuryComponent} from './components/jury/jury.component';
+import {UpdateComponent as JuryUpdate} from './components/jury/update/update.component';
+import {UpdateComponent as AspTypeUpdate} from './components/aspirant-type/update/update.component';
+import {AspirantTypeComponent} from './components/aspirant-type/aspirant-type.component';
+import {GenPasswordComponent} from './components/gen-password/gen-password.component';
+
+import {LoginGuard} from '../../guards/login.guard';
+import {GradeComponent} from './components/gen-password/grade/grade.component';
+import {DeveloperComponent} from '../developer/developer.component';
 
 const routes: Routes = [
   {
     // tslint:disable-next-line:max-line-length
     path: 'admin', component: AdminComponent, children: [ /*canActivate: [LoginGuard], TODO: Aquí también necesitaré un can activateChild para cuando no se pueda modificar algun dato dado x condicion*/
-      {path: '', component: AdminDefaultComponent},
-      {path: 'sessions', component: AdminDefaultComponent}, // TODO: Change this for session component
-      {path: 'session/:id', component: AdminDefaultComponent}, // TODO: Change this for session component
-      {path: 'teachers', component: AdminDefaultComponent}, // TODO: Change this for teacher component
-      {path: 'teacher/:id', component: AdminDefaultComponent}, // TODO: Change this for teacher component
-      {path: 'profile', component: AdminDefaultComponent}, // TODO: Change this for profile component. Admin profile
-      {path: 'profile/:id', component: AdminDefaultComponent}, // TODO: Change this for profile component
-      {path: 'aspirant/teachers', component: AdminDefaultComponent}, // TODO: Change this for aspirant teacher component
-      {path: 'aspirant/teacher/:id', component: AdminDefaultComponent}, // TODO: Change this for aspirant teacher component
-      {path: 'aspirant/students', component: AdminStudentComponent},
-      {path: 'aspirant/student/:id', component: AdminStudentUpdateComponent},
-      {path: 'juries', component: AdminStudentUpdateComponent}, // TODO: Change this for juries component
-      {path: 'jury/:id', component: AdminStudentUpdateComponent}, // TODO: Change this for jury component
-      {path: 'aspirant-types', component: AdminStudentUpdateComponent}, // TODO: Change this for aspirant-types component
-      {path: 'aspirant-type/:id', component: AdminStudentUpdateComponent}, // TODO: Change this for aspirant-type component
-      {path: 'gen-passwords', component: AdminStudentUpdateComponent}, // TODO: Change this for gen-passwords component
-      // tslint:disable-next-line:max-line-length
-      {path: 'gen-password/:id', component: AdminStudentUpdateComponent}, // TODO: Change this for gen-password component, depending on course
+      {path: '', component: AdminHome},
+      {path: 'sessions', component: SessionsComponent},
+      {path: 'session/:id', component: SessionUpdate},
+      {path: 'teachers', component: TeacherComponent},
+      {path: 'teacher/:id', component: TeacherUpdate},
+      {path: 'profile', component: ProfileComponent},
+      {path: 'profile/:id', component: ProfileUpdateComponent},
+      {path: 'aspirant/teachers', component: AspirantTeacherComponent},
+      {path: 'aspirant/teacher/:id', component: AspTeacherUpdate},
+      {path: 'aspirant/students', component: AspirantStudentComponent},
+      {path: 'aspirant/student/:id', component:  StudentUpdate},
+      {path: 'juries', component: JuryComponent},
+      {path: 'jury/:id', component: JuryUpdate},
+      {path: 'aspirant-types', component: AspirantTypeComponent},
+      {path: 'aspirant-type/:id', component: AspTypeUpdate},
+      {path: 'gen-passwords', component: GenPasswordComponent},
+      {path: 'gen-password/:id', component: GradeComponent},
     ]
   },
-  {path: 'developers', component: AdminStudentUpdateComponent}, // TODO: Change this for developers component
+  {path: 'developers', component: DeveloperComponent},
 ];
 
 @NgModule({

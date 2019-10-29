@@ -7,10 +7,10 @@ import {takeUntil} from 'rxjs/operators';
 
 @Component({
   selector: 'app-admin-student-update',
-  templateUrl: './admin-student-update.component.html',
-  styleUrls: ['./admin-student-update.component.css']
+  templateUrl: './update.component.html',
+  styleUrls: ['./update.component.css']
 })
-export class AdminStudentUpdateComponent implements OnInit, OnDestroy {
+export class UpdateComponent implements OnInit, OnDestroy {
   private student$: Observable<any>;
   private unsubscribe$ = new Subject<void>();
   private id: any; // TODO: revisar si es necesaria esta clase

@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-admin-default',
-  templateUrl: './admin-default.component.html',
-  styleUrls: ['./admin-default.component.css']
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class AdminDefaultComponent implements OnInit {
+export class HomeComponent implements OnInit {
   public title = 'analytics';
 
   constructor() { }

@@ -1,16 +1,16 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {AdminSectionsService} from '../../../../../../services/admin-sections.service';
-import {Aspirant} from '../../../../../../classes/models/aspirant.model';
+import {AdminSectionsService} from '../../../../../services/admin-sections.service';
+import {Aspirant} from '../../../../../classes/models/aspirant.model';
 import {Observable, Subject, Subscription} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-admin-student',
-  templateUrl: './admin-student.component.html',
-  styleUrls: ['./admin-student.component.css']
+  templateUrl: './aspirant-student.component.html',
+  styleUrls: ['./aspirant-student.component.css']
 })
-export class AdminStudentComponent implements OnInit, OnDestroy {
+export class AspirantStudentComponent implements OnInit, OnDestroy {
   public title = 'Estudiantes';
 
   private unsubscribe$ = new Subject<void>();

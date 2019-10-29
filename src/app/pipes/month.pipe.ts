@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class MonthPipe implements PipeTransform {
 
   transform(day: any, month: any, year: any): any {
-    return `${day} de ${this.changeMonth(month)} del ${year}`;
+    return `${day} de ${this.changeMonth(month)} ${year}`;
   }
 
   changeMonth(monthNumber: any) {

@@ -11,6 +11,7 @@ import { InternalServerErrorComponent } from '../../errors/internal-server-error
 import { LoginComponent } from '../login/login.component';
 
 import {LoginService} from '../../services/login.service';
+import { DeveloperComponent } from '../developer/developer.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {LoginService} from '../../services/login.service';
     ForbiddenComponent,
     InternalServerErrorComponent,
     LoginComponent,
+    DeveloperComponent,
   ],
   imports: [
     BrowserModule,
