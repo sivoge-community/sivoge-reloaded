@@ -1,1 +1,61 @@
-<p>sessions works!</p>
+<div class="card-header text-capitalize"> {{ title }} </div>
+<div class="card-body">
+  <div class="container">
+    <ngb-pagination
+      [(page)]="pagination.page"
+      [pageSize]="pagination.pageSize"
+      [collectionSize]="historiesLength"
+      [maxSize]="4" [rotate]="true" [ellipses]="false"
+      [boundaryLinks]="true"></ngb-pagination>
+  </div>
+
+  <div class="container">
+    <div class="wrap">
+      <!--<ng-container *ngIf="sessionState; then sessionAct; else sessionNotActive"></ng-container>-->
+      <div *ngFor="let session of session$ | slice: (pagination.page-1) * pagination.pageSize : (pagination.page-1) * pagination.pageSize + pagination.pageSize">
+        <!--TODO: Cuando esté lista la api puedo mover t0d0 este css a su clase e inyectar una clase u otra y borrar el ng-template-->
+        <div *ngIf="session.id != sessionActive.id; else sessionState? sessionAct: sessionNotActive">
+          <div class="box no-select" [ngStyle]="{'background': 'url(assets/images/norsup-7.jpg) no-repeat',
+                                    'background-size': 'cover', 'background-position': 'center'}">
+            <div class="grade">
+              <h4> {{session.date}} </h4>
+            </div>
+            <h1 class="text-capitalize"> {{session.name}} </h1>
+            <div class="poster p2" (click)="onSessionDownloadClick()" [ngbTooltip]="'Descargar'">
+              <h4><i class="fas fa-file-download"></i></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!--ng templates: session active and session not active-->
+<ng-template #sessionAct>
+  <div class="box no-select" [ngStyle]="{'background': 'url(assets/images/norsup-7.jpg) no-repeat',
+                                    'background-size': 'cover', 'background-position': 'center'}">
+    <div class="grade">
+      <h4> {{sessionActive.date}} </h4>
+    </div>
+    <h1 class="text-capitalize"> {{sessionActive.name}} </h1>
+    <div class="poster p1" (click)="onUpdateSessionActiveClick()" [ngbTooltip]="'Actualizar'">
+      <h4><i class="fas fa-address-card"></i></h4>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #sessionNotActive>
+  <div class="box no-select" [ngStyle]="{'background': 'url(assets/images/norsup-7.jpg) no-repeat',
+                                    'background-size': 'cover', 'background-position': 'center'}">
+    <div class="grade">
+      <h4>Nueva sesión</h4>
+    </div>
+    <h1> Agregar sesión </h1>
+    <div class="poster p1" (click)="onNewSessionClick()" [ngbTooltip]="'Nueva Sesión'">
+      <h4>+</h4>
+    </div>
+  </div>
+</ng-template>

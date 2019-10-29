@@ -28,7 +28,8 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/simple-line-icons/css/simple-line-icons.css",
               "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
-              "src/styles.css"
+              "src/styles.css",
+              "src/cards.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.slim.min.js",

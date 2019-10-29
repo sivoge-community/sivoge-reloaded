@@ -2,15 +2,17 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Aspirant} from '../classes/models/aspirant.model';
+import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RequestAspirantJuryService {
-  readonly url: string = 'http://localhost:3000/';
+  readonly url: string;
   private readonly header: HttpHeaders;
 
   constructor(private httpClient: HttpClient) {
+    this.url = environment.urlServer;
     this.header = new HttpHeaders().set('Content-Type', 'application/json');
   }
 

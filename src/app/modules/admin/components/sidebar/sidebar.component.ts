@@ -13,12 +13,7 @@ export class SidebarComponent implements OnInit {
 
   constructor(private adminModalsService: AdminModalsService) { }
 
-  ngOnInit() {
-  }
-
-  openSessionModal() {
-    this.adminModalsService.openSessionModal(ModalVotingSessionComponent);
-  }
+  ngOnInit() { }
 
   openFileUploadModal() {
     this.adminModalsService.openFileUploadModal(ModalUserFileUploadComponent);

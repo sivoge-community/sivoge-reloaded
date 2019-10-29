@@ -30,7 +30,7 @@ export class AspirantStudentComponent implements OnInit, OnDestroy {
       });
     this.page = 1;
     this.pageSize = 7;
-    console.log(this.student$);
+    // console.log(this.student$);
   }
 
   updateObject(student) {

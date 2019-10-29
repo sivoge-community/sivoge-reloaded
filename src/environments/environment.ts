@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  appVersion: '0.0.3'
+  appVersion: '0.1.1',
+  urlServer: 'http://localhost:3000/'
 };
 
 /*

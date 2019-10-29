@@ -3,7 +3,7 @@
     <ul class="nav">
       <li class="nav-title">Sesión</li>
       <li class="nav-item">
-        <a class="nav-link cursor-pointer" (click)="openSessionModal()">
+        <a class="nav-link cursor-pointer" [routerLink]="['/admin/sessions']" routerLinkActive="active-link">
           <i class="nav-icon fas fa-address-book mr-1"></i> Sesión de Votación
           <span class="badge badge-danger"><span class="fas fa-thumbs-down"></span></span>
           <!--Aqui puedo hacer que si no se ha creado la sesión, cambie un color u otro-->
@@ -12,11 +12,13 @@
       <li class="nav-title">Usuarios</li>
       <li class="nav-item">
         <a class="nav-link cursor-pointer" (click)="openFileUploadModal()">
-        <i class="nav-icon fas fa-pencil-alt"></i> Estudiantes</a>
+        <i class="nav-icon fas fa-pencil-alt"></i> Estudiantes
+        </a>
       </li>
       <li class="nav-item">
         <a class="nav-link cursor-pointer" (click)="openTeacherModal()">
-          <i class="nav-icon fa fa-briefcase"></i> Profesores</a>
+          <i class="nav-icon fa fa-briefcase"></i> Profesores
+        </a>
       </li>
       <li class="nav-title">Aspirantes y Jurado</li>
       <li class="nav-item nav-dropdown">
@@ -26,24 +28,31 @@
         <ul class="nav-dropdown-items">
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/admin/aspirant/students']" routerLinkActive="active-link">
-              <i class="nav-icon fas fa-pencil-alt"></i> Estudiante</a>
+              <i class="nav-icon fas fa-pencil-alt"></i> Estudiante
+            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/admin/aspirant/teachers']" routerLinkActive="active-link">
-              <i class="nav-icon fas fa-briefcase"></i> Profesor</a>
+              <i class="nav-icon fas fa-briefcase"></i> Profesor
+            </a>
           </li>
       </ul>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="nav-icon fas fa-eye"></i> Jurado</a>
+        <a class="nav-link" [routerLink]="['/admin/juries']" routerLinkActive="active-link">
+          <i class="nav-icon fas fa-eye"></i> Jurado
+        </a>
       </li>
       <li class="nav-title">Extras</li>
       <li class="nav-item">
-        <a href="#" class="nav-link"><i class="nav-icon fas fa-user-cog"></i> Tipos de aspirante</a>
+        <a [routerLink]="['/admin/aspirant-types']" routerLinkActive="active-link" class="nav-link">
+          <i class="nav-icon fas fa-user-cog"></i> Tipos de aspirante
+        </a>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link"><i class="nav-icon fas fa-key"></i> Generar contraseñas</a>
+        <a [routerLink]="['/admin/gen-passwords']" routerLinkActive="active-link" class="nav-link">
+          <i class="nav-icon fas fa-key"></i> Generar contraseñas
+        </a>
       </li>
       <li class="nav-item">
         <a href="#" class="nav-link"><i class=" nav-icon fas fa-address-card"></i> Vistazo tarjetones</a>
