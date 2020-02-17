@@ -3,7 +3,7 @@
   <div class="card-body">
   <div class="container">
     <div class="card-container mx-auto no-select">
-      <button type="button" class="close close-btn" aria-label="Close" [ngbTooltip]="deleteBtn" (click)="onDeleteClick(student)">
+      <button type="button" class="close close-btn" aria-label="Close" [ngbTooltip]="'Eliminar'" (click)="onDeleteClick(student)">
         <span aria-hidden="true">&times;</span>
       </button>
       <span class="pro text-uppercase">est</span>
@@ -36,5 +36,3 @@
     </div>-->
   </div>
 </div>
-
-<ng-template #deleteBtn>Eliminar</ng-template>

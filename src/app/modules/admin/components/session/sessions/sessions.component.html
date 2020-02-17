@@ -35,20 +35,22 @@
 
 <!--ng templates: session active and session not active-->
 <ng-template #sessionAct>
-  <div class="box no-select" [ngStyle]="{'background': 'url(assets/images/norsup-7.jpg) no-repeat',
+  <div class="box no-select" [ngStyle]="{'background': 'url(assets/images/norsup-2.jpg) no-repeat',
                                     'background-size': 'cover', 'background-position': 'center'}">
     <div class="grade">
       <h4> {{sessionActive.date}} </h4>
     </div>
     <h1 class="text-capitalize"> {{sessionActive.name}} </h1>
-    <div class="poster p1" (click)="onUpdateSessionActiveClick()" [ngbTooltip]="'Actualizar'">
-      <h4><i class="fas fa-address-card"></i></h4>
+    <div class="poster p1" [ngbTooltip]="'Actualizar'">
+      <a [routerLink]="['/admin/session/', sessionActive.date]">
+        <h4><i class="fas fa-address-card"></i></h4>
+      </a>
     </div>
   </div>
 </ng-template>
 
 <ng-template #sessionNotActive>
-  <div class="box no-select" [ngStyle]="{'background': 'url(assets/images/norsup-7.jpg) no-repeat',
+  <div class="box no-select" [ngStyle]="{'background': 'url(assets/images/norsup-10.jpg) no-repeat',
                                     'background-size': 'cover', 'background-position': 'center'}">
     <div class="grade">
       <h4>Nueva sesión</h4>

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Router} from '@angular/router';
+import {SessionService} from './session.service';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,8 @@ import {Router} from '@angular/router';
 export class LoginService {
   private token: string;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+              private sessionService: SessionService) { }
 
   getToken(): string {
     return this.token;
@@ -15,9 +17,15 @@ export class LoginService {
 
   login(id: string, password: string): void {
     // Authentication logic
+    this.sessionService.setLocalStorageItem();
   }
 
   isAuthenticated(): boolean {
+    if (this.token) {
+      this.sessionService.setLocalStorageItem();
+    } else {
+      this.sessionService.deleteLocalStorageSessionItems();
+    }
     return this.token != null;
   }
 
@@ -38,6 +46,7 @@ export class LoginService {
 
   logout(): void {
     this.token = null;
+    this.sessionService.deleteLocalStorageSessionItems();
     this.router.navigate(['login']);
   }
 }

@@ -20,10 +20,9 @@ export class SessionsComponent implements OnInit, OnDestroy {
   private unsubscribe$ = new Subject<void>();
   private historiesLength: number;
 
-  constructor(private sessionService: SessionService, private adminModalsService: AdminModalsService) {
-    this.pagination = {
-      page: 1, pageSize: 3
-    };
+  constructor(private sessionService: SessionService,
+              private adminModalsService: AdminModalsService) {
+    this.pagination = {page: 1, pageSize: 4 };
   }
 
   ngOnInit() {
